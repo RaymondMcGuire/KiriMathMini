@@ -1,0 +1,24 @@
+#ifndef _KIRI_MATH_DETAIL_CPP_UTILS_INL_H_
+#define _KIRI_MATH_DETAIL_CPP_UTILS_INL_H_
+
+#include <kiri_math_mini/cpp_utils.h>
+
+namespace kiri_math_mini
+{
+
+    // Source code from:
+    // http://en.cppreference.com/w/cpp/algorithm/lower_bound
+    template <class ForwardIt, class T, class Compare>
+    ForwardIt binaryFind(ForwardIt first, ForwardIt last, const T &value,
+                         Compare comp)
+    {
+        // Note: BOTH type T and the type after ForwardIt is dereferenced
+        // must be implicitly convertible to BOTH Type1 and Type2, used in Compare.
+        // This is stricter than lower_bound requirement (see above)
+
+        first = std::lower_bound(first, last, value, comp);
+        return first != last && !comp(value, *first) ? first : last;
+    }
+} // namespace kiri_math_mini
+
+#endif // _KIRI_MATH_DETAIL_CPP_UTILS_INL_H_
