@@ -1,3 +1,12 @@
+/*** 
+ * @Author: Xu.WANG raymondmgwx@gmail.com
+ * @Date: 2023-02-23 21:23:56
+ * @LastEditors: Xu.WANG raymondmgwx@gmail.com
+ * @LastEditTime: 2023-02-25 00:59:18
+ * @FilePath: \XProtoSphere\external\KiriMathMini\include\kiri_math_mini\math\inl\math_utils-inl.h
+ * @Description: 
+ * @Copyright (c) 2023 by Xu.WANG, All Rights Reserved. 
+ */
 /*
  * @Author: Doyub Kim  
  * @Date: 2020-03-20 14:17:19 
@@ -314,6 +323,6 @@ namespace kiri_math_mini
         return a3 * cubic(f) + a2 * square(f) + a1 * f + a0;
     }
 
-} // namespace kiri_math_mini
+} // namespace kiri_math
 
 #endif // _KIRI_MATH_DETAIL_MATH_UTILS_INL_H_

@@ -1,8 +1,11 @@
-/*
- * @Author: Doyub Kim 
- * @Date: 2020-03-17 18:46:03 
- * @Last Modified by: Xu.Wang
- * @Last Modified time: 2020-03-17 18:54:15
+/***
+ * @Author: Xu.WANG raymondmgwx@gmail.com
+ * @Date: 2021-06-28 14:48:24
+ * @LastEditors: Xu.WANG raymondmgwx@gmail.com
+ * @LastEditTime: 2022-09-18 17:11:49
+ * @FilePath: \Kiri\KiriMath\include\kiri_math\math\inl\vector-inl.h
+ * @Description:
+ * @Copyright (c) 2022 by Xu.WANG raymondmgwx@gmail.com, All Rights Reserved.
  */
 #ifndef _KIRI_MATH_DETAIL_VECTOR_INL_H_
 #define _KIRI_MATH_DETAIL_VECTOR_INL_H_
@@ -73,6 +76,15 @@ namespace kiri_math_mini
             _elements[i] = static_cast<T>(inputElem);
             ++i;
         }
+    }
+
+    template <typename T, size_t N>
+    void Vector<T, N>::init(const Vector<T, N + 1> &other)
+    {
+        // Parallel evaluation of the expression
+        const Vector<T, N + 1> &expression = other();
+        forEachIndex([&](size_t i)
+                     { _elements[i] = expression[i]; });
     }
 
     template <typename T, size_t N>
@@ -217,7 +229,7 @@ namespace kiri_math_mini
         T ret = _elements.front();
         for (T val : _elements)
         {
-            ret = kiri_math_mini::absmin(ret, val);
+            ret = kiri_math::absmin(ret, val);
         }
         return ret;
     }
@@ -228,7 +240,7 @@ namespace kiri_math_mini
         T ret = _elements.front();
         for (T val : _elements)
         {
-            ret = kiri_math_mini::absmax(ret, val);
+            ret = kiri_math::absmax(ret, val);
         }
         return ret;
     }

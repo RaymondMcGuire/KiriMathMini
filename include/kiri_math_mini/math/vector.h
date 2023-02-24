@@ -64,6 +64,7 @@ namespace kiri_math_mini
         Vector(const Vector &other);
 
         // MARK: Basic setters
+        void init(const Vector<T, N + 1>& other);
 
         //! Set vector instance with initializer list.
         template <typename U>

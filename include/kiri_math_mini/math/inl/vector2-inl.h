@@ -1,10 +1,12 @@
-/*
- * @Author: Doyub Kim  
- * @Date: 2020-03-20 20:17:55 
- * @Last Modified by: Xu.Wang
- * @Last Modified time: 2020-03-20 22:21:05
+/***
+ * @Author: Xu.WANG raymondmgwx@gmail.com
+ * @Date: 2021-06-28 14:48:24
+ * @LastEditors: Xu.WANG raymondmgwx@gmail.com
+ * @LastEditTime: 2022-09-18 17:20:23
+ * @FilePath: \Kiri\KiriMath\include\kiri_math\math\inl\vector2-inl.h
+ * @Description:
+ * @Copyright (c) 2022 by Xu.WANG raymondmgwx@gmail.com, All Rights Reserved.
  */
-
 #ifndef _KIRI_MATH_DETAIL_VECTOR2_INL_H_
 #define _KIRI_MATH_DETAIL_VECTOR2_INL_H_
 
@@ -22,6 +24,13 @@ namespace kiri_math_mini
     Vector<T, 2>::Vector(const std::initializer_list<U> &lst)
     {
         set(lst);
+    }
+
+    template <typename T>
+    void Vector<T, 2>::init(const Vector<T, 3> &v)
+    {
+        x = v.x;
+        y = v.y;
     }
 
     // Basic setters
@@ -268,13 +277,13 @@ namespace kiri_math_mini
     template <typename T>
     T Vector<T, 2>::absmin() const
     {
-        return kiri_math_mini::absmin(x, y);
+        return kiri_math::absmin(x, y);
     }
 
     template <typename T>
     T Vector<T, 2>::absmax() const
     {
-        return kiri_math_mini::absmax(x, y);
+        return kiri_math::absmax(x, y);
     }
 
     template <typename T>

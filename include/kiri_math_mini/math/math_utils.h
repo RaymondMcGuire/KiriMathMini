@@ -1,10 +1,10 @@
 /*** 
  * @Author: Xu.WANG
  * @Date: 2020-10-18 01:04:50
- * @LastEditTime: 2020-10-21 16:58:47
- * @LastEditors: Xu.WANG
+ * @LastEditTime: 2023-02-25 00:59:10
+ * @LastEditors: Xu.WANG raymondmgwx@gmail.com
  * @Description: 
- * @FilePath: \Kiri\KiriMath\include\kiri_math_mini\math\math_utils.h
+ * @FilePath: \XProtoSphere\external\KiriMathMini\include\kiri_math_mini\math\math_utils.h
  */
 
 #ifndef _KIRI_MATH_MATH_UTILS_H_
@@ -236,7 +236,7 @@ namespace kiri_math_mini
     inline T monotonicCatmullRom(const T &f0, const T &f1, const T &f2, const T &f3,
                                  T t);
 
-} // namespace kiri_math_mini
+} // namespace kiri_math
 
 #include "inl/math_utils-inl.h"
 

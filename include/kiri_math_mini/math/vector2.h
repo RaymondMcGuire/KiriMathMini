@@ -1,8 +1,11 @@
-/*
- * @Author: Doyub Kim 
- * @Date: 2020-03-17 16:10:23 
- * @Last Modified by: Xu.Wang
- * @Last Modified time: 2020-03-20 22:20:08
+/***
+ * @Author: Xu.WANG raymondmgwx@gmail.com
+ * @Date: 2021-06-28 14:48:24
+ * @LastEditors: Xu.WANG raymondmgwx@gmail.com
+ * @LastEditTime: 2022-09-18 17:19:49
+ * @FilePath: \Kiri\KiriMath\include\kiri_math\math\vector2.h
+ * @Description:
+ * @Copyright (c) 2022 by Xu.WANG raymondmgwx@gmail.com, All Rights Reserved.
  */
 #ifndef _KIRI_MATH_VECTOR2_H_
 #define _KIRI_MATH_VECTOR2_H_
@@ -53,6 +56,7 @@ namespace kiri_math_mini
         constexpr Vector(const Vector &v) : x(v.x), y(v.y) {}
 
         // MARK: Basic setters
+        void init(const Vector<T, 3> &pt);
 
         //! Set both x and y components to \p s.
         void set(T s);
