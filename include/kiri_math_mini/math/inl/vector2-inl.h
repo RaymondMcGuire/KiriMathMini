@@ -277,13 +277,13 @@ namespace kiri_math_mini
     template <typename T>
     T Vector<T, 2>::absmin() const
     {
-        return kiri_math::absmin(x, y);
+        return kiri_math_mini::absmin(x, y);
     }
 
     template <typename T>
     T Vector<T, 2>::absmax() const
     {
-        return kiri_math::absmax(x, y);
+        return kiri_math_mini::absmax(x, y);
     }
 
     template <typename T>

@@ -229,7 +229,7 @@ namespace kiri_math_mini
         T ret = _elements.front();
         for (T val : _elements)
         {
-            ret = kiri_math::absmin(ret, val);
+            ret = kiri_math_mini::absmin(ret, val);
         }
         return ret;
     }
@@ -240,7 +240,7 @@ namespace kiri_math_mini
         T ret = _elements.front();
         for (T val : _elements)
         {
-            ret = kiri_math::absmax(ret, val);
+            ret = kiri_math_mini::absmax(ret, val);
         }
         return ret;
     }
